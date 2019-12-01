@@ -1,0 +1,13 @@
+{
+  "name": "netlify-static",
+  "version": "1.0.0",
+  "description": "Continuous deployment using Netlify",
+  "main": "index.js",
+  "repository": "git@github.com/thinkcompany/netlify-static.git",
+  "author": "John Young <john.young@thinkcompany.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "watermark" : "./scripts/watermark.sh"
+  }
+}
