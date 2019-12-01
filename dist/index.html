@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Think Company | Deployment using Netlify</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<meta property="og:title" content="Think Company Deployment using Netlify" />
+	<meta property="og:description" content="Continous deployment of a static site using Netlify." />
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<h1>Deployment with Netlify</h1>
+			<p>
+				Build #<a href="#">$NUMBER</a>
+				of branch <a href="https://bitbucket.org/thinkcompany/netlify-static/src/$BRANCH/">$BRANCH</a>
+				at commit <a href="https://bitbucket.org/thinkcompany/netlify-static/commits/$COMMIT">$COMMIT</a>
+				deployed to $DESTINATION
+				<span class="deploytime" datetime="$TIME" title="$TIME">$TIME</span></p>
+		</div>
+
+		<div class="main">
+			<img src="img/tc-ops-logo.svg" />
+		</div>
+	</div>
+	<!-- "Deployed 2 days ago", instead of "Deployed at LONG-CRYPTIC-DATESTRING -->
+	<script src="js/timeago.min.js"></script>
+	<script lang="javascript">
+		var deploytime = document.querySelector('.deploytime');
+		timeago.render(deploytime, 'en_US');
+	</script>
+</body>
+</html>
