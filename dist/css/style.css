@@ -1,13 +1,58 @@
-html, body {
-  background: #d24334;
+html,
+body {
+  animation: colorchange 10s; /* animation-name followed by duration in seconds*/
+  /* you could also use milliseconds (ms) or something like 2.5s */
+  -webkit-animation: colorchange 10s; /* Chrome and Safari */
+}
+
+@keyframes colorchange {
+  0% {
+    background: #8c3c4a;
+  }
+  25% {
+    background: #c4853e;
+  }
+  50% {
+    background: #056c7a;
+  }
+  75% {
+    background: #1a2d41;
+  }
+  100% {
+    background: #3a2948;
+  }
+}
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */ {
+  0% {
+    background: #8c3c4a;
+  }
+  25% {
+    background: #c4853e;
+  }
+  50% {
+    background: #056c7a;
+  }
+  75% {
+    background: #1a2d41;
+  }
+  100% {
+    background: #3a2948;
+  }
+}
+
+html,
+body {
   color: #fff;
-  font-family: 'Roboto slab', serif;
+  font-family: "Roboto slab", serif;
 }
-a:link, a:visited {
-  color: #FFFFFF;
+a:link,
+a:visited {
+  color: #ffffff;
 }
-a:hover, a:active {
- background-color: #ccc;
+a:hover,
+a:active {
+  background-color: #ccc;
 }
 .wrapper {
   display: grid;
@@ -29,14 +74,12 @@ h1 {
   font-size: 4em;
 }
 img {
-  transform: rotate(90deg)
-
-;
+  transform: rotate(90deg);
 }
 
 img:hover {
-    transition-duration: 0.5s;
-    transition-property: transform;
-	transform: rotate(360deg);
-	-webkit-transform: rotate(360deg);
+  transition-duration: 0.5s;
+  transition-property: transform;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
 }
