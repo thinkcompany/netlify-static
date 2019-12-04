@@ -1,16 +1,27 @@
-html, body {
-  background: #d24334;
+html,
+body {
+  position: relative;
+  background: #000;
   color: #fff;
+<<<<<<< HEAD
   font-family: 'Roboto slab', serif;
 
+=======
+  font-family: "Roboto slab", serif;
+>>>>>>> master
 }
-a:link, a:visited {
-  color: #FFFFFF;
+a:link,
+a:visited {
+  color: #ffffff;
 }
-a:hover, a:active {
- background-color: #ccc;
+a:hover,
+a:active {
+  background-color: #ccc;
 }
 .wrapper {
+  position: absolute;
+  z-index: 1000;
+  width: 100vw;
   display: grid;
   grid-template-columns: 50px auto 50px;
   grid-template-rows: 50px auto 50px auto;
@@ -29,6 +40,7 @@ a:hover, a:active {
 h1 {
   font-size: 4em;
 }
+
 img {
   -webkit-transform-style: preserve-3d;
   -webkit-animation: in 1s;
@@ -41,7 +53,7 @@ img:hover {
   transition-property: transform;
 }
 @-webkit-keyframes in {
-  
+
     from   { -webkit-transform: rotate(0deg); }
     to { -webkit-transform: rotate(1800deg);}
 }
@@ -51,4 +63,167 @@ img:hover {
 }
 .dhiraj-image img{
   margin: 10px 0;
+}
+
+img.badge {
+  transform: rotate(90deg);
+}
+
+img.badge:hover {
+  transition-duration: 0.5s;
+  transition-property: transform;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+}
+
+/* Background animation and styles below */
+
+@keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@-moz-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+/* cloud colors */
+@keyframes cloud-colorize {
+  0% {
+    filter: sepia() hue-rotate(0deg);
+  }
+
+  100% {
+    filter: sepia() hue-rotate(359deg);
+  }
+}
+@-webkit-keyframes cloud-colorize {
+  0% {
+    filter: sepia() hue-rotate(0deg);
+  }
+
+  100% {
+    filter: sepia() hue-rotate(359deg);
+  }
+}
+
+@-moz-keyframes cloud-colorize {
+  0% {
+    filter: sepia() hue-rotate(0deg);
+  }
+
+  100% {
+    filter: sepia() hue-rotate(359deg);
+  }
+}
+
+@-webkit-keyframes cloud-colorize {
+  0% {
+    filter: sepia() hue-rotate(0deg);
+  }
+
+  100% {
+    filter: sepia() hue-rotate(359deg);
+  }
+}
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.stars {
+  background: black
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 0;
+}
+
+.twinkling {
+  width: 10000px;
+  height: 100%;
+  background: transparent
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png")
+    repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+
+  -moz-animation: move-background 70s linear infinite;
+  -ms-animation: move-background 70s linear infinite;
+  -o-animation: move-background 70s linear infinite;
+  -webkit-animation: move-background 70s linear infinite;
+  animation: move-background 70s linear infinite;
+}
+
+.clouds {
+  width: 10000px;
+  height: 100%;
+  background: transparent
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png")
+    repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+
+  -moz-animation: move-background 150s linear infinite,
+    cloud-colorize 5s linear infinite;
+  -ms-animation: move-background 150s linear infinite,
+    cloud-colorize 5s linear infinite;
+  -o-animation: move-background 150s linear infinite,
+    cloud-colorize 5s linear infinite;
+  -webkit-animation: move-background 150s linear infinite,
+    cloud-colorize 5s linear infinite;
+  animation: move-background 150s linear infinite,
+    cloud-colorize 5s linear infinite;
+  filter: sepia() hue-rotate(0deg);
+}
+
+img.moon {
+  height: 70vh;
+  width: 70vh;
+  position: absolute;
+  z-index: 3;
+  right: 20px;
 }
