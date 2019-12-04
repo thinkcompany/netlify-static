@@ -30,12 +30,13 @@ h1 {
 }
 img {
   transform: rotate(90deg)
-    transition-duration: 0.5s;
-    transition-property: transform;
+
 ;
 }
 
 img:hover {
+    transition-duration: 0.5s;
+    transition-property: transform;
 	transform: rotate(360deg);
 	-webkit-transform: rotate(360deg);
 }
