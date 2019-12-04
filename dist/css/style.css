@@ -36,13 +36,14 @@ img:hover {
   -webkit-animation: out 1s;
   transition-duration: 0.5s;
   transition-property: transform;
+  -webkit-transform-style: preserve-3d;
 }
 @-webkit-keyframes in {
   
-    from   { -webkit-transform: rotate(0deg); }
-    to { -webkit-transform: rotate(360deg);}
+    from   { -webkit-transform: rotateY(0deg); }
+    to { -webkit-transform: rotateY(360deg);}
 }
 @-webkit-keyframes out {
-    0%   { -webkit-transform: rotate(360deg); }
-    100% { -webkit-transform: rotate(0deg); }
+    0%   { -webkit-transform: rotateY(360deg); }
+    100% { -webkit-transform: rotateY(0deg); }
 }
