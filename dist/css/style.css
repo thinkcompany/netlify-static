@@ -3,7 +3,12 @@ body {
   position: relative;
   background: #000;
   color: #fff;
+<<<<<<< HEAD
+  font-family: 'Roboto slab', serif;
+
+=======
   font-family: "Roboto slab", serif;
+>>>>>>> master
 }
 a:link,
 a:visited {
@@ -34,6 +39,30 @@ a:active {
 }
 h1 {
   font-size: 4em;
+}
+
+img {
+  -webkit-transform-style: preserve-3d;
+  -webkit-animation: in 1s;
+}
+
+img:hover {
+  -webkit-transform-style: preserve-3d;
+  -webkit-animation: out 1s;
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+@-webkit-keyframes in {
+
+    from   { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(1800deg);}
+}
+@-webkit-keyframes out {
+    0%   { -webkit-transform: rotate(1800deg); }
+    100% { -webkit-transform: rotate(0deg); }
+}
+.dhiraj-image img{
+  margin: 10px 0;
 }
 
 img.badge {
