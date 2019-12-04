@@ -35,6 +35,7 @@ a:active {
 h1 {
   font-size: 4em;
 }
+
 img.badge {
   transform: rotate(90deg);
 }
