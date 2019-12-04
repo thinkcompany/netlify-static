@@ -28,3 +28,6 @@ a:hover, a:active {
 h1 {
   font-size: 4em;
 }
+img {
+  transform: rotate(90deg);
+}
