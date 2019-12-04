@@ -4,7 +4,7 @@ This static site is reference implementation of continuous deployment using Netl
 
 Upon a merge to the `master` branch, this site is deployed to [netlify-static.netlify.com](https://netlify-static.netlify.com/)
 
-Upon creation of any pull request, Netlify builds a [deploy preview](https://www.netlify.com/blog/2016/07/20/introducing-deploy-previews-in-netlify/) and deploys the site to an ephemeral URL.  For instance, branch `feature/add-watermark` can be seen at [5de446a7163c730008cb9906--netlify-static.netlify.com/](https://5de446a7163c730008cb9906--netlify-static.netlify.com/)
+Upon creation of any pull request, Netlify builds a [deploy preview](https://www.netlify.com/blog/2016/07/20/introducing-deploy-previews-in-netlify/) and deploys the site to an ephemeral URL.
 
 ## Contributing
 
