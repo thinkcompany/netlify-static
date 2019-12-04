@@ -2,6 +2,7 @@ html, body {
   background: #d24334;
   color: #fff;
   font-family: 'Roboto slab', serif;
+
 }
 a:link, a:visited {
   color: #FFFFFF;
@@ -41,12 +42,12 @@ img:hover {
 }
 @-webkit-keyframes in {
   
-    from   { -webkit-transform: rotateY(0deg); }
-    to { -webkit-transform: rotateY(1800deg);}
+    from   { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(1800deg);}
 }
 @-webkit-keyframes out {
-    0%   { -webkit-transform: rotateY(1800deg); }
-    100% { -webkit-transform: rotateY(0deg); }
+    0%   { -webkit-transform: rotate(1800deg); }
+    100% { -webkit-transform: rotate(0deg); }
 }
 .dhiraj-image img{
   margin: 10px 0;
