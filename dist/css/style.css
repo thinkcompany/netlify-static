@@ -29,5 +29,13 @@ h1 {
   font-size: 4em;
 }
 img {
-  transform: rotate(90deg);
+  transform: rotate(90deg)
+    transition-duration: 0.5s;
+    transition-property: transform;
+;
+}
+
+img:hover {
+	transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
 }
