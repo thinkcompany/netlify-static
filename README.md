@@ -11,8 +11,10 @@ Upon creation of any pull request, Netlify builds a [deploy preview](https://www
 You are encouraged to kick the tires on this site!
 
 1. Clone this repository
-2. Create a feature branch
-3. Push your branch to `origin`
-4. Create a pull request
-5. Notice all the Netlify tooling that happens when you create your pull request, and check out the deploy preview that was created.
-6. Share your experience in Think Company Slack channel #devops
+2. In the terminal, run `npm install` to install dependencies.
+3. Then run `npm run dev` to start the development server at `http://localhost:3000/`.
+4. Create a feature branch
+5. Push your branch to `origin`
+6. Create a pull request
+7. Notice all the Netlify tooling that happens when you create your pull request, and check out the deploy preview that was created.
+8. Share your experience in Think Company Slack channel #devops

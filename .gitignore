@@ -1,3 +1,4 @@
 dist/index.html
 .vscode/settings.json
 node_modules
+.DS_Store
