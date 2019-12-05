@@ -36,12 +36,17 @@ h1 {
   font-size: 4em;
 }
 
-img {
+
+
+/*Animations for the badge*/
+
+img.badge {
   -webkit-transform-style: preserve-3d;
   -webkit-animation: in 1s;
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
-img:hover {
+img.badge:hover {
   -webkit-transform-style: preserve-3d;
   -webkit-animation: out 1s;
   transition-duration: 0.5s;
@@ -56,17 +61,14 @@ img:hover {
     0%   { -webkit-transform: rotate(1800deg); }
     100% { -webkit-transform: rotate(0deg); }
 }
-.dhiraj-image img{
-  margin: 10px 0;
-}
 
-img.badge:hover {
+/*img.badge:hover {
   transition-duration: 0.5s;
   transition-property: transform;
   transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
 }
-
+*/
 /* Background animation and styles below */
 
 @keyframes move-background {
@@ -211,10 +213,56 @@ img.badge:hover {
   filter: sepia() hue-rotate(0deg);
 }
 
+
+
+
+/*Animations for Dhiraj's face*/
+
+img.dhiraj-image{
+  margin: 10px 0;
+}
+
+img.dhiraj-image {
+  -webkit-transform-style: preserve-3d;
+  -webkit-animation: scaling-in 1s;
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+/*
+img.badge:hover {
+  -webkit-transform-style: preserve-3d;
+  -webkit-animation: out 1s;
+  transition-duration: 0.5s;
+  transition-property: transform;
+}*/
+@-webkit-keyframes scaling-in {
+
+    from   { 
+      transform: rotate(0deg) scale(20);
+      /*-webkit-transform: rotate(0deg); */
+    }
+    to { 
+      transform: rotate(1800deg) scale(1);
+      /*-webkit-transform: rotate(1800deg);*/
+    }
+}
+
+
+/*animating the moon*/
+
 img.moon {
   height: 70vh;
   width: 70vh;
   position: absolute;
   z-index: 3;
   right: 20px;
+  -webkit-animation: MoonMove 200s;
+}
+
+@-webkit-keyframes MoonMove{
+  from{
+    transform: translateX(-20px);
+  }
+  to{
+    transform: translateX(400px);
+  }
 }
