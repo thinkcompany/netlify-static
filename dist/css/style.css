@@ -3,12 +3,7 @@ body {
   position: relative;
   background: #000;
   color: #fff;
-<<<<<<< HEAD
   font-family: 'Roboto slab', serif;
-
-=======
-  font-family: "Roboto slab", serif;
->>>>>>> master
 }
 a:link,
 a:visited {
@@ -63,10 +58,6 @@ img:hover {
 }
 .dhiraj-image img{
   margin: 10px 0;
-}
-
-img.badge {
-  transform: rotate(90deg);
 }
 
 img.badge:hover {
