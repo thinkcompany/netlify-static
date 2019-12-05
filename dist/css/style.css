@@ -1,18 +1,24 @@
+/*  Defined Animations in separate file for tidiness */
+@import "animations.css";
+
 html,
 body {
   position: relative;
   background: #000;
   color: #fff;
-  font-family: 'Roboto slab', serif;
+  font-family: "Roboto slab", serif;
 }
+
 a:link,
 a:visited {
-  color: #ffffff;
+  color: #fff;
 }
+
 a:hover,
 a:active {
   background-color: #ccc;
 }
+
 .wrapper {
   position: absolute;
   z-index: 1000;
@@ -22,16 +28,19 @@ a:active {
   grid-template-rows: 50px auto 50px auto;
   grid-auto-flow: column;
 }
+
 .header {
   grid-column-start: 2;
   grid-row-start: 2;
   text-align: center;
 }
+
 .main {
   grid-column-start: 2;
   grid-row-start: 4;
   text-align: center;
 }
+
 h1 {
   font-size: 4em;
 }
@@ -147,6 +156,9 @@ img.badge:hover {
   }
 }
 
+
+
+
 .background-container {
   position: fixed;
   top: 0;
@@ -157,7 +169,8 @@ img.badge:hover {
 }
 
 .stars {
-  background: black
+  background:
+    black
     url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
   position: absolute;
   top: 0;
@@ -171,7 +184,8 @@ img.badge:hover {
 .twinkling {
   width: 10000px;
   height: 100%;
-  background: transparent
+  background:
+    transparent
     url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png")
     repeat;
   background-size: 1000px 1000px;
@@ -180,18 +194,13 @@ img.badge:hover {
   top: 0;
   bottom: 0;
   z-index: 2;
-
-  -moz-animation: move-background 70s linear infinite;
-  -ms-animation: move-background 70s linear infinite;
-  -o-animation: move-background 70s linear infinite;
-  -webkit-animation: move-background 70s linear infinite;
-  animation: move-background 70s linear infinite;
 }
 
 .clouds {
   width: 10000px;
   height: 100%;
-  background: transparent
+  background:
+    transparent
     url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png")
     repeat;
   background-size: 1000px 1000px;
@@ -200,18 +209,6 @@ img.badge:hover {
   top: 0;
   bottom: 0;
   z-index: 3;
-
-  -moz-animation: move-background 150s linear infinite,
-    cloud-colorize 5s linear infinite;
-  -ms-animation: move-background 150s linear infinite,
-    cloud-colorize 5s linear infinite;
-  -o-animation: move-background 150s linear infinite,
-    cloud-colorize 5s linear infinite;
-  -webkit-animation: move-background 150s linear infinite,
-    cloud-colorize 5s linear infinite;
-  animation: move-background 150s linear infinite,
-    cloud-colorize 5s linear infinite;
-  filter: sepia() hue-rotate(0deg);
 }
 
 
@@ -266,5 +263,54 @@ img.moon {
   }
   to{
     transform: translateX(400px);
+  }
+}
+
+/* Add support for reduced motion */
+@media screen and (prefers-reduced-motion: no-preference) {
+  img {
+    -webkit-transform-style: preserve-3d;
+    -webkit-animation: spin-in 1s;
+  }
+
+  img:hover {
+    -webkit-transform-style: preserve-3d;
+    -webkit-animation: spin-out 1s;
+    transition-duration: 0.5s;
+    transition-property: transform;
+  }
+
+  img.badge:hover {
+    transition-duration: 0.5s;
+    transition-property: transform;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+
+  .twinkling {
+    -moz-animation: move-background 70s linear infinite;
+    -ms-animation: move-background 70s linear infinite;
+    -o-animation: move-background 70s linear infinite;
+    -webkit-animation: move-background 70s linear infinite;
+    animation: move-background 70s linear infinite;
+  }
+
+  .clouds {
+    -moz-animation:
+      move-background 150s linear infinite,
+      cloud-colorize 5s linear infinite;
+    -ms-animation:
+      move-background 150s linear infinite,
+      cloud-colorize 5s linear infinite;
+    -o-animation:
+      move-background 150s linear infinite,
+      cloud-colorize 5s linear infinite;
+    -webkit-animation:
+      move-background 150s linear infinite,
+      cloud-colorize 5s linear infinite;
+    animation:
+      move-background 150s linear infinite,
+      cloud-colorize 5s linear infinite;
+    filter: sepia() hue-rotate(0deg);
   }
 }
