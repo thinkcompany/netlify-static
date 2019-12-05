@@ -42,23 +42,24 @@ h1 {
 
 img.badge {
   -webkit-transform-style: preserve-3d;
-  -webkit-animation: in 1s;
+  -webkit-animation: in 0.5s;
   transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 img.badge:hover {
   -webkit-transform-style: preserve-3d;
   -webkit-animation: out 1s;
-  transition-duration: 0.5s;
   transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+
 }
 @-webkit-keyframes in {
 
     from   { -webkit-transform: rotate(0deg); }
-    to { -webkit-transform: rotate(1800deg);}
+    to { -webkit-transform: rotate(720deg);}
 }
 @-webkit-keyframes out {
-    0%   { -webkit-transform: rotate(1800deg); }
+    0%   { -webkit-transform: rotate(720deg); }
     100% { -webkit-transform: rotate(0deg); }
 }
 
@@ -255,7 +256,8 @@ img.moon {
   position: absolute;
   z-index: 3;
   right: 20px;
-  -webkit-animation: MoonMove 200s;
+  -webkit-animation: MoonMove 400s;
+  transition-timing-function: linear;
 }
 
 @-webkit-keyframes MoonMove{
