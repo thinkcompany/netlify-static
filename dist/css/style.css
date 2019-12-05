@@ -8,14 +8,17 @@ body {
   color: #fff;
   font-family: "Roboto slab", serif;
 }
+
 a:link,
 a:visited {
-  color: #ffffff;
+  color: #fff;
 }
+
 a:hover,
 a:active {
   background-color: #ccc;
 }
+
 .wrapper {
   position: absolute;
   z-index: 1000;
@@ -25,16 +28,19 @@ a:active {
   grid-template-rows: 50px auto 50px auto;
   grid-auto-flow: column;
 }
+
 .header {
   grid-column-start: 2;
   grid-row-start: 2;
   text-align: center;
 }
+
 .main {
   grid-column-start: 2;
   grid-row-start: 4;
   text-align: center;
 }
+
 h1 {
   font-size: 4em;
 }
@@ -53,7 +59,8 @@ h1 {
 }
 
 .stars {
-  background: black
+  background:
+    black
     url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
   position: absolute;
   top: 0;
@@ -67,7 +74,8 @@ h1 {
 .twinkling {
   width: 10000px;
   height: 100%;
-  background: transparent
+  background:
+    transparent
     url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png")
     repeat;
   background-size: 1000px 1000px;
@@ -81,7 +89,8 @@ h1 {
 .clouds {
   width: 10000px;
   height: 100%;
-  background: transparent
+  background:
+    transparent
     url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png")
     repeat;
   background-size: 1000px 1000px;
@@ -130,15 +139,20 @@ img.moon {
   }
 
   .clouds {
-    -moz-animation: move-background 150s linear infinite,
+    -moz-animation:
+      move-background 150s linear infinite,
       cloud-colorize 5s linear infinite;
-    -ms-animation: move-background 150s linear infinite,
+    -ms-animation:
+      move-background 150s linear infinite,
       cloud-colorize 5s linear infinite;
-    -o-animation: move-background 150s linear infinite,
+    -o-animation:
+      move-background 150s linear infinite,
       cloud-colorize 5s linear infinite;
-    -webkit-animation: move-background 150s linear infinite,
+    -webkit-animation:
+      move-background 150s linear infinite,
       cloud-colorize 5s linear infinite;
-    animation: move-background 150s linear infinite,
+    animation:
+      move-background 150s linear infinite,
       cloud-colorize 5s linear infinite;
     filter: sepia() hue-rotate(0deg);
   }

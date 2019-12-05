@@ -2,14 +2,17 @@
   from {
     -webkit-transform: rotate(0deg);
   }
+
   to {
     -webkit-transform: rotate(1800deg);
   }
 }
+
 @-webkit-keyframes spin-out {
   0% {
     -webkit-transform: rotate(1800deg);
   }
+
   100% {
     -webkit-transform: rotate(0deg);
   }
@@ -19,36 +22,41 @@
 
 @keyframes move-background {
   from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0, 0, 0);
   }
+
   to {
-    -webkit-transform: translate3d(1000px, 0px, 0px);
+    -webkit-transform: translate3d(1000px, 0, 0);
   }
 }
+
 @-webkit-keyframes move-background {
   from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0, 0, 0);
   }
+
   to {
-    -webkit-transform: translate3d(1000px, 0px, 0px);
+    -webkit-transform: translate3d(1000px, 0, 0);
   }
 }
 
 @-moz-keyframes move-background {
   from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0, 0, 0);
   }
+
   to {
-    -webkit-transform: translate3d(1000px, 0px, 0px);
+    -webkit-transform: translate3d(1000px, 0, 0);
   }
 }
 
 @-webkit-keyframes move-background {
   from {
-    -webkit-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0, 0, 0);
   }
+
   to {
-    -webkit-transform: translate3d(1000px, 0px, 0px);
+    -webkit-transform: translate3d(1000px, 0, 0);
   }
 }
 
@@ -62,6 +70,7 @@
     filter: sepia() hue-rotate(359deg);
   }
 }
+
 @-webkit-keyframes cloud-colorize {
   0% {
     filter: sepia() hue-rotate(0deg);
