@@ -45,9 +45,119 @@ h1 {
   font-size: 4em;
 }
 
-.dhiraj-image img {
-  margin: 10px 0;
+
+
+/*Animations for the badge*/
+
+img.badge {
+  -webkit-transform-style: preserve-3d;
+  -webkit-animation: in 0.5s;
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
 }
+
+img.badge:hover {
+  -webkit-transform-style: preserve-3d;
+  -webkit-animation: out 1s;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+
+}
+@-webkit-keyframes in {
+
+    from   { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(720deg);}
+}
+@-webkit-keyframes out {
+    0%   { -webkit-transform: rotate(720deg); }
+    100% { -webkit-transform: rotate(0deg); }
+}
+
+/*img.badge:hover {
+  transition-duration: 0.5s;
+  transition-property: transform;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+}
+*/
+/* Background animation and styles below */
+
+@keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@-moz-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+/* cloud colors */
+@keyframes cloud-colorize {
+  0% {
+    filter: sepia() hue-rotate(0deg);
+  }
+
+  100% {
+    filter: sepia() hue-rotate(359deg);
+  }
+}
+@-webkit-keyframes cloud-colorize {
+  0% {
+    filter: sepia() hue-rotate(0deg);
+  }
+
+  100% {
+    filter: sepia() hue-rotate(359deg);
+  }
+}
+
+@-moz-keyframes cloud-colorize {
+  0% {
+    filter: sepia() hue-rotate(0deg);
+  }
+
+  100% {
+    filter: sepia() hue-rotate(359deg);
+  }
+}
+
+@-webkit-keyframes cloud-colorize {
+  0% {
+    filter: sepia() hue-rotate(0deg);
+  }
+
+  100% {
+    filter: sepia() hue-rotate(359deg);
+  }
+}
+
+
+
 
 .background-container {
   position: fixed;
@@ -101,12 +211,59 @@ h1 {
   z-index: 3;
 }
 
+
+
+
+/*Animations for Dhiraj's face*/
+
+img.dhiraj-image{
+  margin: 10px 0;
+}
+
+img.dhiraj-image {
+  -webkit-transform-style: preserve-3d;
+  -webkit-animation: scaling-in 1.8s;
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+/*
+img.badge:hover {
+  -webkit-transform-style: preserve-3d;
+  -webkit-animation: out 1s;
+  transition-duration: 0.5s;
+  transition-property: transform;
+}*/
+@-webkit-keyframes scaling-in {
+
+    from   { 
+      transform: rotate(0deg) scale(20);
+      /*-webkit-transform: rotate(0deg); */
+    }
+    to { 
+      transform: rotate(2520deg) scale(1);
+      /*-webkit-transform: rotate(1800deg);*/
+    }
+}
+
+
+/*animating the moon*/
+
 img.moon {
   height: 70vh;
   width: 70vh;
   position: absolute;
   z-index: 3;
   right: 20px;
+  -webkit-animation: MoonMove 400s;
+  transition-timing-function: linear;
+}
+
+@-webkit-keyframes MoonMove{
+  from{
+    transform: translateX(-20px);
+  }
+  to{
+    transform: translateX(400px);
+  }
 }
 
 /* Add support for reduced motion */
