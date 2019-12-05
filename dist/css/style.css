@@ -225,7 +225,7 @@ img.dhiraj-image{
 
 img.dhiraj-image {
   -webkit-transform-style: preserve-3d;
-  -webkit-animation: scaling-in 1s;
+  -webkit-animation: scaling-in 1.8s;
   transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 /*
@@ -242,7 +242,7 @@ img.badge:hover {
       /*-webkit-transform: rotate(0deg); */
     }
     to { 
-      transform: rotate(1800deg) scale(1);
+      transform: rotate(2520deg) scale(1);
       /*-webkit-transform: rotate(1800deg);*/
     }
 }
