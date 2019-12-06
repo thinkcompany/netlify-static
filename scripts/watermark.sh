@@ -2,20 +2,9 @@
 # In a "real" site, this would be handled by something like Webpack
 cp src/index.html dist/
 
-# The Netlify build environment provides environment variables.
-# You can check the deploy log to see what is output from the below:
-echo "-----------------------------"
-echo "Netlify environment variables"
-echo "COMMIT_REF: '$COMMIT_REF'"
-echo "BRANCH: '$BRANCH'"
-echo "HEAD: '$HEAD'"
-echo "PULL_REQUEST: '$PULL_REQUEST'"
-echo "REVIEW_ID: '$REVIEW_ID'"
-echo "-----------------------------"
-
 # Add a watermark
 # For pull requests: "Commit abc123 on branch 'feature/new-feature' for PR#456 deployed three days ago'"
-# For a master deploy: "Deployed three days ago"
+# For a master deploy: "Commit abc123 deployed three days ago"
 
 cd dist
 
