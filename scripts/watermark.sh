@@ -27,10 +27,12 @@ sed -i "s/\$BRANCH/$(echo "$HEAD" | sed 's~\/~\\\/~g')/g" index.html
 
 # If this is a pull request, add a pull request link.  Otherwise, skip it.
 
-if [ $PULL_REQUEST == 'true' ]
+if [ "$PULL_REQUEST" == "true" ]
 then
+    echo "$PULL_REQUEST == true"
     sed -i "s/\$PR_NUMBER/$REVIEW_ID/g" index.html
 else
+    echo "$PULL_REQUEST !== true"
     sed -i "s/<!-- pr.*//g" index.html
     sed -i "s/<!-- branch.*//g" index.html
 fi
