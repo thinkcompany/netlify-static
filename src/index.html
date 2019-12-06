@@ -21,11 +21,12 @@
       <h1>Deployment with Netlify</h1>
       <img class="dhiraj-image" src="img/dhiraj.png" alt="spinning dhiraj">
       <embed src="audio/holytransitionsbatman.mp3" autostart="true" loop="false" hidden="true">
-      <p>
-        Commit <a href="https://github.com/thinkcompany/netlify-static/commit/$COMMIT">$COMMIT</a>
-                on branch <a href="https://github.com/thinkcompany/netlify-static/tree/$BRANCH">$BRANCH</a>
-                for <a href="https://github.com/thinkcompany/netlify-static/pull/$PR_NUMBER">PR#$PR_NUMBER</a>
-                deployed <span class="deploytime" datetime="$TIME" title="$TIME">$TIME</span></p>
+      <p class="watermark">
+        <!-- commit -->Commit <a href="https://github.com/thinkcompany/netlify-static/commit/$COMMIT">$COMMIT</a><!-- /commit -->
+        <!-- branch -->on branch <a href="https://github.com/thinkcompany/netlify-static/tree/$BRANCH">$BRANCH</a><!-- /branch -->
+        <!-- pr -->for <a href="https://github.com/thinkcompany/netlify-static/pull/$PR_NUMBER">PR#$PR_NUMBER</a><!-- /pr -->
+        <!-- deployed -->deployed <span class="deploytime" datetime="$TIME" title="$TIME">$TIME</span></p><!-- /deployed  -->
+      </p>
     </div>
 
     <div class="main">
