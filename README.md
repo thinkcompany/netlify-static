@@ -2,7 +2,7 @@
 
 This static site is reference implementation of continuous deployment using Netlify.
 
-Upon a merge to the `master` branch, this site is deployed to [netlify-static.netlify.com](https://netlify-static.netlify.com/)
+Upon a merge to the `main` branch, this site is deployed to [netlify-static.netlify.com](https://netlify-static.netlify.com/)
 
 Upon creation of any pull request, Netlify builds a [deploy preview](https://www.netlify.com/blog/2016/07/20/introducing-deploy-previews-in-netlify/) and deploys the site to an ephemeral URL.
 
